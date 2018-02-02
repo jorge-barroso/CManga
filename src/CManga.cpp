@@ -8,7 +8,8 @@
 
 #include <iostream>
 #include <getopt.h>
-
+#include "providers/Providers.h"
+#include "providers/Submanga.h"
 int main(int argc, char* argv[])
 {
 	option longOptions[] =
@@ -49,4 +50,5 @@ int main(int argc, char* argv[])
 	}
 
 	std::cout << url << std::endl;
+	Submanga submanga = new Provider(url);
 }
