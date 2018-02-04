@@ -8,15 +8,16 @@
 #ifndef SUBMANGA_H_
 #define SUBMANGA_H_
 
-#include "Providers.h"
+#include "Provider.h"
 
-class Submanga: public Providers
+class Submanga: public Provider
 {
 public:
-	std::ostringstream getNextPage();
+	bool getNextPage();
 	bool nextChapter();
+	int getChapter();
 private:
-	bool isCoverPage();
+	bool isMainSite();
 };
 
 #endif /* SUBMANGA_H_ */

@@ -7,14 +7,18 @@
 
 #include "Submanga.h"
 
-std::ostringstream Providers::getNextPage() {
+bool Submanga::getNextPage() {
 	return nullptr;
 }
 
-bool Providers::nextChapter() {
+bool Submanga::nextChapter() {
 	return false;
 }
 
-bool Providers::isCoverPage() {
+bool Submanga::isMainSite() {
 	return false;
+}
+
+int Submanga::getChapter() {
+	return 0;
 }
