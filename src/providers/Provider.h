@@ -10,10 +10,13 @@
 
 #include <iostream>
 #include <fstream>
+#include <boost/network/uri.hpp>
+#include <boost/network/uri/uri_io.hpp>
 class Provider
 {
 private:
-	std::string url;
+	boost::network::uri::uri url;
+	std::string urlString;
 	std::ostringstream fileStream;
 	std::ofstream outFile;
 	bool mainSiteProvided;
@@ -31,3 +34,4 @@ public:
 	void saveAsCommonFile(std::string&);
 };
 
+#endif /* PROVIDERS_H_ */

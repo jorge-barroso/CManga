@@ -8,7 +8,7 @@
 #include "Submanga.h"
 
 bool Submanga::getNextPage() {
-	return nullptr;
+	return false;
 }
 
 bool Submanga::nextChapter() {
@@ -19,6 +19,6 @@ bool Submanga::isMainSite() {
 	return false;
 }
 
-int Submanga::getChapter() {
+unsigned short int Submanga::getChapter() {
 	return 0;
 }

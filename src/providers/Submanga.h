@@ -15,7 +15,7 @@ class Submanga: public Provider
 public:
 	bool getNextPage();
 	bool nextChapter();
-	int getChapter();
+	unsigned short int getChapter();
 private:
 	bool isMainSite();
 };
