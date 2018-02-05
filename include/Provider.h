@@ -15,7 +15,7 @@
 class Provider
 {
 private:
-	boost::network::uri::uri url;
+	boost::network::uri::uri uri;
 	std::string urlString;
 	std::ostringstream fileStream;
 	std::ofstream outFile;
@@ -32,6 +32,7 @@ public:
 
 	bool getIsMainSite();
 	void saveAsCommonFile(std::string&);
+	boost::network::uri::uri getUri();
 };
 
 #endif /* PROVIDERS_H_ */

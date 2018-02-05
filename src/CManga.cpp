@@ -1,16 +1,16 @@
 //============================================================================
-// Name        : Baamanga.cpp
+// Name        : CManga.cpp
 // Author      : 
 // Version     :
 // Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Description : Manga download software in C++, Ansi-style
 //============================================================================
 
 #include <getopt.h>
 #include <iostream>
 #include <vector>
 
-#include "providers/Submanga.h"
+#include "../include/Submanga.h"
 
 int main(int argc, char* argv[])
 {
@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
 	else if(url.find("mangafox", 0))
 		return 0;
 
-	unsigned short chapters = lastChapter-firstChapter;
+	/*unsigned short chapters = lastChapter-firstChapter;
 	do {
 
 		if(p->getIsMainSite() && !(unsigned)(p->getChapter()-firstChapter)<=chapters)
@@ -76,7 +76,8 @@ int main(int argc, char* argv[])
 
 		for(unsigned short page=1; p->getNextPage(); page++)
 		{
-			p->saveAsCommonFile(std::to_string(page)+".jpg");
+			//p->saveAsCommonFile(std::to_string(page)+".jpg");
 		}
-	} while(p->nextChapter());
+	} while(p->nextChapter());*/
+	std::cout << p->getUri().host() << std::endl;
 }
