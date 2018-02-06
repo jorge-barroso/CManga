@@ -5,10 +5,12 @@
  *      Author: Jorge Barroso
  */
 
-#include "../include/Provider.h"
+#include "Provider.h"
+#include <string>
 
-Provider::Provider(std::string& url) : uri(url)
+Provider::Provider(std::string& url)
 {
+	uri(url);
 	this->urlString = url;
 	this->mainSiteProvided = this->isMainSite();
 }
@@ -28,4 +30,9 @@ void Provider::saveAsCommonFile(std::string& fileName)
 boost::network::uri::uri Provider::getUri()
 {
 	return this->uri;
+}
+
+bool Provider::getIsMainSite()
+{
+	return this->mainSiteProvided;
 }
